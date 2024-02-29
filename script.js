@@ -67,11 +67,26 @@ const observer = new IntersectionObserver(
     }
 )
 
+const observeSkillList = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        entry.target.classList.toggle("show", entry.isIntersecting)
+        if(entry.isIntersecting){
+            skillsList.unobserve(entry.target)
+        }
+    })
+},
+{
+    threshold: 0,
+}
+)
+
+observeSkillList.observe(skillsList)
+
 observer.observe(content)
 observer.observe(avatarImg)
 observer.observe(aboutContent)
 observer.observe(aboutImg)
-observer.observe(skillsList)
+// observer.observe(skillsList)
 observer.observe(gmail)
 observer.observe(linkedIn)
 observer.observe(github)
