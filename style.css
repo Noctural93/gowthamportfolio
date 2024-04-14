@@ -535,6 +535,21 @@ a{
   padding-top: 60px;
 }
 
+.oye-busy-blog {
+  width: 50%;
+  height: 400px;
+  overflow: hidden;
+  > img {
+    width: 100%;
+    transform: translateY(0);
+    transition: 1s ease-out;
+    &:hover {
+      transform: translateY(calc(400px - 100%));
+      transition-duration: 4s;
+    }
+  }
+}
+
 .projects-container h1 {
   display: flex;
   flex-direction: row;
