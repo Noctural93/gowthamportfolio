@@ -288,13 +288,14 @@ a{
 .small-avatar{
   height: 352px;
   position: relative;
+  top: -32px;
 }
 
 .rotate-text {
   position: absolute;
   background-color: transparent;
   height: 490px;
-  top: -39px;
+  top: -69px;
   animation: rotate 8s linear infinite;
   overflow: hidden;
 }
@@ -503,7 +504,7 @@ a{
 }
 
 .right-container{
-  left: 55%;
+  left: 65%;
 }
 
 .work-timeLine {
@@ -531,12 +532,17 @@ a{
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 12px;
   color: #ffffff;
   padding-top: 60px;
 }
 
-.oye-busy-blog {
+.oyeBusy-project-container {
   width: 50%;
+}
+
+.oye-busy-blog {
+  width: 100%;
   height: 400px;
   overflow: hidden;
   > img {
@@ -550,15 +556,27 @@ a{
   }
 }
 
-.projects-container h1 {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-.projects-container h1 img {
-  margin-left: 12px;
+.details-container {
+  padding-top: 1.7rem;
+  > h1 {
+    font-size: 23px;
+  }
+  > p {
+    font-size: 19px;
+    padding-top: 0.8rem;
+    padding-bottom: 1rem;
+  }
+  > a {
+    margin-right: 12px;
+    color: white;
+    padding: 11px;
+    border-radius: 5px;
+    &:hover{
+      background-color: #faf321;
+      color: #000000;
+      font-weight: 450;
+    }
+  }
 }
 
 .contact-contianer {
@@ -874,6 +892,16 @@ a{
   }
   .about-img.show{
     transform: translateY(0);
+  }
+  .oyeBusy-project-container {
+    width: 80%;
+  }  
+  .oye-busy-blog {
+    height: 250px;
+    >img:hover {
+      transform: translateY(calc(250px - 100%));
+      transition-duration: 4s;
+    }
   }
   .skills-list {
     width: 80%;
